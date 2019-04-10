@@ -19,8 +19,7 @@ int main ()
    cout << "La suma de x es: " << suma(x,lenx) << endl;
    cout << "La suma de y es: " << suma(y,leny) << endl;
    return 0;
-
-}
+   }
 float suma(float* arr, int len) 
     {
     float sum = 0;
