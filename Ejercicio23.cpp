@@ -11,21 +11,21 @@ int main ()
    string filename;
    float* x, y;
    float sum_y, sum_x;
-   int len_x = 0, len_y = 0;
-   filename1 = "valores_x.txt";
-   x = leer(filename1, &lenx);
-   filename2 = "valores_y.txt";
-   y = leer(filename2, &leny);
-   cout << "La suma de x es: " << suma(x,len_x) << endl;
-   cout << "La suma de y es: " << suma(y,len_y) << endl;
+   int len_x=0, len_y=0;
+   filename1="valores_x.txt";
+   x=leer(filename1, &lenx);
+   filename2="valores_y.txt";
+   y=leer(filename2, &leny);
+   cout<<"La suma de x es:"<<suma(x,len_x)<<endl;
+   cout<<"La suma de y es:"<<suma(y,len_y)<<endl;
    return 0;
    }
 float suma(float* arr, int len) 
     {
-    float sum = 0;
-    for(int i=0; i<len; i++)
+    float sum=0;
+    for(int i=0;i<len;i++)
       {
-      sum += arr[i];
+      sum+=arr[i];
       }
     }
 
@@ -33,7 +33,7 @@ float* leer(string filename, int *len)
    {
    string line;
    ifstream infile;
-   int num_filas = 0;
+   int num_filas=0;
    float* datos;    
    infile.open(filename);
    getline(infile, line);
@@ -43,18 +43,18 @@ float* leer(string filename, int *len)
       getline(infile,line);
       }
    infile.close(); 
-   datos = new float[num_filas];
-   int i = 0;   
+   datos=new float[num_filas];
+   int i=0;   
    infile.open(filename);
    getline(infile, line);
    while(infile)
       {
-      datos[i] = atof(line.c_str());
+      datos[i]=atof(line.c_str());
       i++;
       getline(infile,line);
       }
    infile.close();
-   *len = num_filas;
+   *len=num_filas;
    return datos;
    }
     return sum;
