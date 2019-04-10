@@ -10,14 +10,14 @@ int main ()
    {
    string filename;
    float* x, y;
-   float suma_x, suma_y;
-   int lenx = 0, leny = 0;
+   float sum_y, sum_x;
+   int len_x = 0, len_y = 0;
    filename1 = "valores_x.txt";
    x = leer(filename1, &lenx);
    filename2 = "valores_y.txt";
    y = leer(filename2, &leny);
-   cout << "La suma de x es: " << suma(x,lenx) << endl;
-   cout << "La suma de y es: " << suma(y,leny) << endl;
+   cout << "La suma de x es: " << suma(x,len_x) << endl;
+   cout << "La suma de y es: " << suma(y,len_y) << endl;
    return 0;
    }
 float suma(float* arr, int len) 
@@ -57,5 +57,5 @@ float* leer(string filename, int *len)
    *len = num_filas;
    return datos;
    }
-    return suma;
+    return sum;
 }
