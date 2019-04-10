@@ -12,31 +12,28 @@ int main ()
    float* x, y;
    float suma_x, suma_y;
    int lenx = 0, leny = 0;
-
-   filename = "valores_x.txt";
-   x = leer(filename, &lenx);
-   filename = "valores_y.txt";
-   y = leer(filename, &leny);
-
-   cout << "Suma x: " << suma(x,lenx) << endl;
-   cout << "Suma y: " << suma(y,leny) << endl;
-
+   filename1 = "valores_x.txt";
+   x = leer(filename1, &lenx);
+   filename2 = "valores_y.txt";
+   y = leer(filename2, &leny);
+   cout << "La suma de x es: " << suma(x,lenx) << endl;
+   cout << "La suma de y es: " << suma(y,leny) << endl;
    return 0;
 
 }
 float suma(float* arr, int len) 
     {
-    float suma = 0;
+    float sum = 0;
     for(int i=0; i<len; i++)
       {
-      suma += arr[i];
+      sum += arr[i];
       }
     }
 
 float* leer(string filename, int *len)
    {
-   ifstream infile;
    string line;
+   ifstream infile;
    int num_filas = 0;
    float* datos;    
    infile.open(filename);
